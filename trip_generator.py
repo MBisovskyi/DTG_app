@@ -5,12 +5,18 @@ list_of_destinations = ["Kyiv", "Ternopil", "Lviv", "Ivano-Frankivsk", "Vinnytsy
 list_of_transportations = ["Train", "Airplane", "Rental car", "Bicycle", "Bus", "a walk"]
 list_of_entertainments = ['tour thru "Caves of Dovbush"', "Andrew's descent", "Baturin Castle", "The old fortress of Kamyanets-Podilsky", "Askania Nova Nature Reserve", '"Hoverla" hiking',  ]
 list_of_restaurants = ["Bachevsky Restaurant", "Coffee Roasters Foundation", "Parovoz Speak Easy", "SHOco", "Fenix Asia, Fenix Italia", "Bunker"]
+list_phrases_destination = ["I don't like it too.", "Not a big deal.", "Let's try something else.", "Nevermind..."]
+list_phrases_transportation = ["Well... some extra work for me to find something else.", "It's ok, I'll keep looking.", "Yeah, I don't like that one too.", "Next!"]
+list_phrases_enterteinment = ["Hm... looked like fun to me.", "You make me work hard here, but it's fine!", "Next candidate!", "Not a problem!"]
+list_phrases_restaurant = ["I didn't like that one too.", "Yea, it doesn't look like tasty place.", "Hope you'are not mistaken!", "Didn't like the name?"]
 list_of_choises = []
 
 # -------- Declaring functions ---------------------------------------------------------------------------------------------
 def random_city():
     random_city = random.choice(list_of_destinations)
     return random_city
+
+def
 
 def random_transport():
     random_transport = random.choice(list_of_transportations)
