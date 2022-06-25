@@ -51,12 +51,9 @@ def trip_generator_completed_strings_concatenation(list_of_choises1,list_of_choi
     string = (f"Let's get a final look at your folowing trip. City you're going to is {list_of_choises1}. You'll get there by {list_of_choises2}. You will see {list_of_choises3}. Don't forget to take your loved one to {list_of_choises4}. Have a nice trip!")
     print(string)
 
-
-    # ---------------------------------------- App starts here! ------------------------------------------------------------
 def trip_generator():
 
         #------------------------------------- Destination selection -------------------------------------------------------
-        print("Hello! Looks like you want to generate a trip thru Ukraine today! I can help! Let's do it!")
         destination = True
         while destination is True:
             city = random_city()
@@ -66,7 +63,7 @@ def trip_generator():
                 print("Great choice!")
                 break
             else:
-                print(f"Not a big deal.")
+                print(random_city_no_phrase())
             continue
 
         # ------------------------------------ Transportation selection ----------------------------------------------------
@@ -80,7 +77,7 @@ def trip_generator():
                 print("That will be fun!")
                 break
             else:
-                print(f"I'll find something else!")
+                print(random_transport_no_phrase())
             continue
 
         # ------------------------------------ Enterteinment selection -----------------------------------------------------
@@ -94,7 +91,7 @@ def trip_generator():
                 print("Such a great place to see!")
                 break
             else:
-                print(f"Don't you want to see {place}? Ok... keep moving.")
+                print(random_enterteinment_no_phrase())
             continue
 
         # ------------------------------------ Restaurant selection ---------------------------------------------------------
@@ -108,7 +105,7 @@ def trip_generator():
                 print("You will like it, i'm sure!")
                 break
             else:
-                print(f"Yea, it doesn't look like tasty place.")
+                print(random_restaurant_no_phrase())
             continue
         
         # ------------------------------------- Final result / Question -------------------------------------------------------
@@ -124,10 +121,11 @@ def trip_generator():
                 trip_generator_completed_strings_concatenation(list_of_choises[0], list_of_choises[1], list_of_choises[2], list_of_choises[3])
                 break
             else:
+                print("Let's start it over again!")
                 list_of_choises.clear()
                 trip_generator() # ------------ If answer is anything except "Yes" - turns on DTGapp over again.
                 break
-        
-        
 
+# ---------------------------------------- App starts here! ------------------------------------------------------------       
+print("Hello! Looks like you want to generate a trip thru Ukraine today! I can help! Let's do it!")
 trip_generator()
