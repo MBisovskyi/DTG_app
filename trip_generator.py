@@ -1,11 +1,13 @@
 import random
 
+# ------- Collection of lists ----------------------------------------------------------------------------------------------
 list_of_destinations = ["Kyiv", "Ternopil", "Lviv", "Ivano-Frankivsk", "Vinnytsya", "Rivne", "Chernihiv", "Kherson", "Kharkiv", "Mariupol"]
 list_of_transportations = ["Train", "Airplane", "Rental car", "Bicycle", "Bus", "a walk"]
 list_of_entertainments = ['tour thru "Caves of Dovbush"', "Andrew's descent", "Baturin Castle", "The old fortress of Kamyanets-Podilsky", "Askania Nova Nature Reserve", '"Hoverla" hiking',  ]
 list_of_restaurants = ["Bachevsky Restaurant", "Coffee Roasters Foundation", "Parovoz Speak Easy", "SHOco", "Fenix Asia, Fenix Italia", "Bunker"]
 list_of_choises = []
 
+# -------- Declaring functions ---------------------------------------------------------------------------------------------
 def random_city():
     random_city = random.choice(list_of_destinations)
     return random_city
@@ -28,7 +30,12 @@ def add_to_list(element):
 def trip_generator_completed_strings_concatenation(list_of_choises1,list_of_choises2,list_of_choises3, list_of_choises4):
     string = (f"Let's get a final look at your folowing trip. City you're going to is {list_of_choises1}. You'll get there by {list_of_choises2}. You will see {list_of_choises3}. Don't forget to take your loved one to {list_of_choises4}. Have a nice trip!")
     print(string)
+
+
+    # ---------------------------------------- App starts here! ------------------------------------------------------------
 def trip_generator():
+
+        #------------------------------------- Destination selection -------------------------------------------------------
         print("Hello! Looks like you want to generate a trip thru Ukraine today! I can help! Let's do it!")
         destination = True
         while destination is True:
@@ -41,6 +48,8 @@ def trip_generator():
             else:
                 print(f"Not a big deal.")
             continue
+
+        # ------------------------------------ Transportation selection ----------------------------------------------------
         print("Before, we go any further, you need to choose a transportation!")
         transportation = True
         while transportation is True:
@@ -53,6 +62,8 @@ def trip_generator():
             else:
                 print(f"I'll find something else!")
             continue
+
+        # ------------------------------------ Enterteinment selection -----------------------------------------------------
         print("Hm... What is next? Next is your pick of enterteinment!")
         enterteinment = True
         while enterteinment is True:
@@ -65,6 +76,8 @@ def trip_generator():
             else:
                 print(f"Don't you want to see {place}? Ok... keep moving.")
             continue
+
+        # ------------------------------------ Restaurant selection ---------------------------------------------------------
         print("Are you taking your loved one? Oh... not my bussines. The reason I'm asking is your next choice - restaurant!")
         restaurant = True
         while restaurant is True:
@@ -77,7 +90,8 @@ def trip_generator():
             else:
                 print(f"Yea, it doesn't look like tasty place.")
             continue
-
+        
+        # ------------------------------------- Final result / Question -------------------------------------------------------
         is_trip_generated = True
         while is_trip_generated is True:
             print("Here is a trip we generated for you:")
@@ -91,7 +105,7 @@ def trip_generator():
                 break
             else:
                 list_of_choises.clear()
-                trip_generator()
+                trip_generator() # ------------ If answer is anything except "Yes" - turns on DTGapp over again.
                 break
         
         
