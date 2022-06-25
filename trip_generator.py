@@ -16,19 +16,33 @@ def random_city():
     random_city = random.choice(list_of_destinations)
     return random_city
 
-def
+def random_city_no_phrase():
+    random_phrase = random.choice(list_phrases_destination)
+    return random_phrase
 
 def random_transport():
     random_transport = random.choice(list_of_transportations)
     return random_transport
 
+def random_transport_no_phrase():
+    random_phrase = random.choice(list_phrases_transportation)
+    return random_phrase
+
 def random_enterteinment():
     random_entertainments = random.choice(list_of_entertainments)
     return random_entertainments
 
+def random_enterteinment_no_phrase():
+    random_phrase = random.choice(list_phrases_enterteinment)
+    return random_phrase
+
 def random_restaurant():
     random_restaurant = random.choice(list_of_restaurants)
     return random_restaurant
+
+def random_restaurant_no_phrase():
+    random_phrase = random.choice(list_phrases_restaurant)
+    return random_phrase
 
 def add_to_list(element):
     list_of_choises.append(element)
